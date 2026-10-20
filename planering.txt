@@ -1,0 +1,12 @@
+HTML-filer:
+- index
+- kontakt
+- event 
+
+Event;
+- Winter Dance 2027
+- Öppna träningar
+
+Övrigt:
+- kurser -> länkar vidare till Alnö Linedance hemsida
+
