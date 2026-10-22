@@ -28,9 +28,34 @@
             </div>
         </header>
         <!--MAIN-->
-        <main>
+        <section id="new">
+            <ul id="errorlist"></ul>
+            <form id="form">
+                <label for="fullname">Namn:</label>
+                <input type="text" id="fullname">&nbsp;
+                <br>
+                <label for="email">E-post:</label>
+                <input type="email" id="email">&nbsp;
+                <br>
+                <label for="subjekt">Ärende:</label>
+                <selcect id="subjekt name=subjekt">
+                    <option>Välj ärende</option>
+                    <option>Kurser</option>
+                    <option>Dansteknik</option>
+                    <option>Pardans</option>
+                    <option>Dansaktivitet</option>
+                    <option>Uppvisning</option>
+                    <option>Sy danskläder</option>
+                </selcect>
+                <br>
+                <lable for="message">Övrigt:</lable>
+                <textarea id="message" name="message">
 
-        </main>
+                </textarea>
+                <br>
+                <input type="submit" value="Skicka">
+            </form>
+        </section>
         <!--FOOTER-->
         <footer>
             <section class="footer-wrapper">
