@@ -18,4 +18,14 @@ img {
 
 header {
     background-color:rgb(22, 22, 69);
+    padding: 10px 0;
+}
+
+/* HEADER */
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
 }
