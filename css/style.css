@@ -17,7 +17,7 @@ img {
 }
 
 header {
-    background-color:rgb(22, 22, 69);
+    background-color:rgb(10, 10, 40);
     padding: 10px 0;
 }
 
@@ -31,20 +31,43 @@ header {
     margin: 0 auto;
 }
 
-.main-wrapper {
-
-}
-
-.side-wrapper {
-
-}
-
 /* LOGOTYP */
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
+.logo img {
+    max-width: 150px;
+}
+
+/* MAIN */
+.main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 15px;
+}
+
+.side-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 15px;
+}
+
+/* NAVIGATION */
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
 
 
 /* FOOTER*/
