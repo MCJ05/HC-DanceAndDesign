@@ -26,6 +26,33 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     max-width: 1000px;
     margin: 0 auto;
 }
+
+.main-wrapper {
+
+}
+
+.side-wrapper {
+
+}
+
+/* LOGOTYP */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* FOOTER*/
+footer {
+
+}
+
+.footer-wrapper {
+
+}
+
