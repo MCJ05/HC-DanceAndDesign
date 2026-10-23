@@ -99,7 +99,15 @@ footer {
 /* FOOTER LOGOTYP */
 .logo-footer {
     grid-area: logo-footer;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.logo-footer img {
+    max-width: 200px;
+    height: auto;
 }
 
 /* FOOTER KONTAKT */
