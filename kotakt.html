@@ -36,37 +36,40 @@
                 Vi erbjuder även att sy tävlingskläder. Skulle detta vara något av intresse eller har 
                 några frågor, vänligen kontakta oss via formuläret nedan.
             </p>
-        </div>
-        <!--MAIN-->
-        <section id="new">
-            <ul id="errorlist"></ul>
-            <form id="form">
-                <label for="fullname">Namn:</label>
-                <input type="text" id="fullname">&nbsp;
-                <br>
-                <label for="email">E-post:</label>
-                <input type="email" id="email">&nbsp;
-                <br>
-                <label for="subjekt">Ärende:</label>
-                <selcect id="subjekt name=subjekt">
-                    <option>Välj ärende</option>
-                    <option>Kurser</option>
-                    <option>Dansteknik</option>
-                    <option>Pardans</option>
-                    <option>Dansaktivitet</option>
-                    <option>Uppvisning</option>
-                    <option>Sy danskläder</option>
-                    <option>Övriga ärenden</option>
-                </selcect>
-                <br>
-                <lable for="message">Övrigt:</lable>
-                <textarea id="message" name="message">
 
-                </textarea>
-                <br>
-                <input type="submit" value="Skicka">
-            </form>
-        </section>
+            <!--MAIN-->
+            <section id="new">
+                <h2>Kontakta oss</h2>
+                <ul id="errorlist"></ul>
+                <form id="subjektform">
+                    <label for="fullname">Namn:</label>
+                    <input type="text" id="fullname">&nbsp;
+                    <br>
+                    <label for="email">E-post:</label>
+                    <input type="email" id="email">&nbsp;
+                    <br>
+                    <label for="subjekt">Ärende:</label>
+                    <select id="subjekt" name="subjekt">
+                        <option value="">Välj ärende</option>
+                        <option value="Kurser">Kurser</option>
+                        <option value="Dansteknik">Dansteknik</option>
+                        <option value="Pardans">Pardans</option>
+                        <option value="Dansaktivitet">Dansaktivitet</option>
+                        <option value="Uppvisning">Uppvisning</option>
+                        <option value="Sy danskläder">Sy danskläder</option>
+                        <option value="Övriga ärenden">Övriga ärenden</option>
+                    </select>
+                    <br>
+                    <label for="message">Övrigt:</label>
+                    <textarea id="message" name="message">
+
+                    </textarea>
+                    <br>
+                    <input type="submit" value="Skicka">
+                </form>
+            </section>
+        </div>
+        
         <!--FOOTER-->
         <footer>
             <section class="footer-wrapper">
