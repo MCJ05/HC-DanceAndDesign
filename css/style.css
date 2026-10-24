@@ -48,6 +48,12 @@ header {
     max-width: 1000px;
     margin: 0 auto;
     padding: 10px 15px;
+    background-color: rgb(52, 52, 71);
+}
+
+.main-wrapper p {
+    font-size: 1.1rem;
+    text-align: start;
 }
 
 .side-wrapper {
@@ -56,6 +62,11 @@ header {
     max-width: 1000px;
     margin: 0 auto;
     padding: 10px 15px;
+}
+
+.side-wrapper p {
+    font-size: 1.1rem;
+    text-align: start;
 }
 
 /* NAVIGATION */
@@ -79,7 +90,7 @@ nav ul li a {
     display: inline-block;
     background-color: white;
     color: black;
-    padding: 15px 25px;
+    padding: 15px 35px;
     text-decoration: none;
     border-radius: 15px;
 }
