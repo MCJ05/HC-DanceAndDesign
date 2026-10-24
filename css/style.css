@@ -31,17 +31,6 @@ header {
     margin: 0 auto;
 }
 
-/* LOGOTYP */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo img {
-    max-width: 150px;
-}
-
 .main-wrapper {
     display: flex;
     justify-content: space-between;
@@ -68,6 +57,17 @@ header {
 
 .side-wrapper p {
     font-size: 1.1rem;
+}
+
+/* LOGOTYP */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    max-width: 150px;
 }
 
 /* NAVIGATION */
@@ -113,6 +113,7 @@ footer {
         "kontakt-footer nav-footer";
     gap: 1rem;
     max-width: 1000px;
+    margin: 0 auto;
     align-items: start;
 }
 
@@ -156,8 +157,6 @@ footer {
 
 /* DESKTOP */
 @media (min-width: 1000px) {
-    
-    
     .center-left {
         position: absolute;
         top: 30rem;
@@ -176,13 +175,44 @@ footer {
         padding: 15px 15px;
     }
 
-    .side-right {
-        display:block;
+    .aside {
+        grid-area: aside;
     }
 
     .button {
-    
         align-items: flex-end;
+        grid-area: aside-button;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .footer-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "logo-footer kontakt-footer nav-footer";
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .logo-footer {
+        justify-content: flex-start;
+        margin: 1rem 0;
+    }
+
+    .nav-footer {
+        text-align: center; 
+    }
+   
+    footer nav ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        text-align: center;
+        justify-content: flex-end;
+        gap: 20px;
     }
 
 }
