@@ -41,7 +41,7 @@ header {
 
 .main-wrapper p {
     font-size: 1.1rem;
-    text-align: start;
+    text-align: center;
 }
 
 .side-wrapper {
@@ -93,7 +93,7 @@ nav ul li a {
 }
 
 .card {
-    width: 500px;
+    width: 400px;
     padding: 20px;
     margin: 20px auto;
 }
@@ -188,10 +188,11 @@ footer {
 
     .side-wrapper {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
         grid-template-areas: 
         "aside aside-button";
         padding: 15px 15px;
+        text-align: start;
     }
 
     .grid-container {
@@ -202,14 +203,31 @@ footer {
         "grid-card1 grid-card2";
     }
 
+    .grid-container h1 {
+        grid-area: h1;
 
-    .aside {
-        grid-area: aside;
+    }
+
+    .grid-container p {
+        font-size: 1.1rem;
+    }
+
+    .grid-card1 {
+        grid-area: grid-card1;
+    }
+
+    .grid-card2 {
+        grid-area: grid-card2;
     }
 
     .button {
         align-items: flex-end;
+        gap: 20px;
+    }
+
+    .aside-button {
         grid-area: aside-button;
+        align-content: center;
     }
 
     nav ul {
