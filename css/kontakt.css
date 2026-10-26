@@ -79,9 +79,30 @@ footer {
 }
 
 /* FOOTER LOGOTYP */
+.logo-footer{
+    grid-area: logo-footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
 
+.logo footer img {
+    max-width: 200px;
+    height: auto;
+}
 
 /* FOOTER KONTAKT */
+.kontakt-footer {
+    grid-area: kontakt-footer;
+    font-size: 1.1em;
+}
 
+.kontakt-footer h2 {
+    font-size: 1.1em;
+}
 
 /* FOOTER NAVIGATION*/
+.nav-footer {
+    grid-area: nav-footer;
+}
