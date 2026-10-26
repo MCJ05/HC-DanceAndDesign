@@ -91,6 +91,13 @@ nav ul li a {
     height: auto;
     background-color: rgb(52, 52, 71);
 }
+
+.card {
+    width: 500px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
 .button {
     display: inline-block;
     background-color: white;
@@ -105,21 +112,9 @@ nav ul li a {
     display: grid;
     grid-template-columns: 1fr;
     min-height: 60dvh;
-    gap: 7rem;
+    gap: 5rem;
     height: 100%;
     padding: 20px 30px;
-}
-
-.grid-container h1 {
-    padding: none;
-}
-
-.grid-container p {
-    font-size: 1.1rem;
-}
-
-.grid-container img {
-    height: 500px;
 }
 
 /* FOOTER*/
@@ -198,6 +193,15 @@ footer {
         "aside aside-button";
         padding: 15px 15px;
     }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "h1 h1"
+        "grid-card1 grid-card2";
+    }
+
 
     .aside {
         grid-area: aside;
