@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+/* HEADER */
+header {
+    background-color: rgb(10, 10, 40);
+    padding: 10px 0;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* LOGOTYP */
+
+
+/* NAVIGATION */
