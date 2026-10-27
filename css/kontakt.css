@@ -12,7 +12,7 @@ body {
 /* HEADER */
 header {
     background-color: rgb(10, 10, 40);
-    padding: 10px 0;
+    padding: 30px 0;
 }
 
 .header-wrapper {
@@ -84,15 +84,6 @@ nav ul li a {
 
 }
 
-.button {
-    display: inline-block;
-    background-color: white;
-    color: black;
-    padding: 15px 35px;
-    text-decoration: none;
-    border-radius: 15px;
-}
-
 /* FOOTER */
 footer {
     background-color: rgb(10, 10, 40);
@@ -113,7 +104,7 @@ footer {
 }
 
 /* FOOTER LOGOTYP */
-.logo-footer{
+.logo-footer {
     grid-area: logo-footer;
     display: flex;
     align-items: center;
@@ -160,6 +151,11 @@ footer {
         padding: 25px;
     }
 
+    nav ul {
+        flex-direction: row;
+        gap: 30px;
+    }
+
     .footer-wrapper {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 
@@ -167,4 +163,5 @@ footer {
         align-items: center;
         gap: 5rem;
     }
+
 }
