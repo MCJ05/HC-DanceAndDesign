@@ -45,42 +45,44 @@
             </div>
 
             <!--MAIN-->
-            <section calss="main-wrapper" id="new">
-                <h2>KONTAKTA OSS</h2>
-                <ul id="errorlist"></ul>
-                <form id="subjektform">
-                    <label for="fullname">Namn:</label>
+            <div class="main-wrapper">
+                <section id="new">
+                    <h2>KONTAKTA OSS</h2>
+                    <ul id="errorlist"></ul>
+                    <form id="subjektform">
+                        <label for="fullname">Namn:</label>
+                        <br>
+                        <input type="text" id="fullname">&nbsp;
+                        <br>
+                        <br>
+                        <label for="email">E-post:</label>
+                        <br>
+                        <input type="email" id="email">&nbsp;
+                        <br>
+                        <br>
+                        <label for="subjekt">Ärende:</label>
+                        <br>
+                        <select id="subjekt" name="subjekt">
+                            <option value="">Välj ärende</option>
+                            <option value="Kurser">Kurser</option>
+                            <option value="Dansteknik">Dansteknik</option>
+                            <option value="Pardans">Pardans</option>
+                            <option value="Dansaktivitet">Dansaktivitet</option>
+                            <option value="Uppvisning">Uppvisning</option>
+                            <option value="Sy danskläder">Sy danskläder</option>
+                            <option value="Övriga ärenden">Övriga ärenden</option>
+                        </select>
+                        <br>
+                        <br>
+                        <label for="message">Övrigt:</label>
+                        <br>
+                        <textarea id="message" name="message"></textarea>
+                        <br>
+                            <input type="submit" value="Skicka">
+                    </form>
                     <br>
-                    <input type="text" id="fullname">&nbsp;
-                    <br>
-                    <br>
-                    <label for="email">E-post:</label>
-                    <br>
-                    <input type="email" id="email">&nbsp;
-                    <br>
-                    <br>
-                    <label for="subjekt">Ärende:</label>
-                    <br>
-                    <select id="subjekt" name="subjekt">
-                        <option value="">Välj ärende</option>
-                        <option value="Kurser">Kurser</option>
-                        <option value="Dansteknik">Dansteknik</option>
-                        <option value="Pardans">Pardans</option>
-                        <option value="Dansaktivitet">Dansaktivitet</option>
-                        <option value="Uppvisning">Uppvisning</option>
-                        <option value="Sy danskläder">Sy danskläder</option>
-                        <option value="Övriga ärenden">Övriga ärenden</option>
-                    </select>
-                    <br>
-                    <br>
-                    <label for="message">Övrigt:</label>
-                    <br>
-                    <textarea id="message" name="message"></textarea>
-                    <br>
-                    <input type="submit" value="Skicka">
-                </form>
-                <br>
-            </section>
+                </section>
+            </div>
         </div>
         
         <!--FOOTER-->
