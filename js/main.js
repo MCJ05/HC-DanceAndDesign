@@ -56,9 +56,22 @@ function validateForm(fullname, email, event) {
     }
 
     // VALIDERA EMAIL-INPUT
-
+    if(email === "") {
+        errors.push("Ange din e-postadress");
+        validate = false;
+    }
 
     // VALIDER VAL AV ÄRENDE
+    if(event === "") {
+        errors.push("Välj ett ärende");
+        validate = false;
+    }
 
+    console.log(fullname);
+    console.log(email);
+    console.log(event);
+
+    // RETUNERA RESULTATET AV VALIDERINGEN
+    return validate;
 
 }
