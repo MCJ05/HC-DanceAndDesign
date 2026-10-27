@@ -133,7 +133,7 @@ footer {
 }
 
 /* TABLET */
-@media(min-width: 800px) {
+@media (min-width: 800px) {
     .header-wrapper {
         flex-direction: row;
         justify-content: space-between;
@@ -142,7 +142,7 @@ footer {
 }
 
 /* DESKTOP */ 
-@media(min-width: 1000px) {
+@media (min-width: 1000px) {
     .grid-container {
         text-align: start;
     }
@@ -162,6 +162,24 @@ footer {
             "logo-footer kontakt-footer nav-footer";
         align-items: center;
         gap: 5rem;
+    }
+
+    .logo-footer {
+        justify-content: flex-start;
+        margin: 1rem 0;
+    }
+
+    .nav-footer {
+        text-align: center;
+    }
+
+    footer nav ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        text-align: center;
+        justify-content: flex-end;
+        gap: 20px;
     }
 
 }
