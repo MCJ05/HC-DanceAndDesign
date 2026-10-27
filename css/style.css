@@ -323,14 +323,4 @@ footer nav ul li a {
     .nav-footer {
         text-align: center; 
     }
-   
-    footer nav ul {
-        display: flex;
-        flex-direction: column;
-        list-style-type: none;
-        text-align: center;
-        justify-content: flex-end;
-        gap: 20px;
-    }
-
 }
