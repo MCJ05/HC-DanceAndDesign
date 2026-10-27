@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(37, 37, 67);
+}
+
+/* HEADER */
+header {
+    background-color: rgb(10, 10, 40);
+    padding: 30px 0;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* LOGOTYP */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+/* NAVIGATION */
+.topnav {
+    overflow: hidden;
+    background-color: rgb(52, 52, 71);
+    position: relative;
+}
+
+.topnav #myLinks {
+    display: none;
+}
+
+.topnav a {
+    color: white;
+    padding: 15px 17px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active {
+    background-color: rgb(10, 10, 40);
+    color: white;
+}
+
+/* MAIN */
+.grid-container {
+    background-color: rgb(52, 52, 71);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    height: 100%;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.grid-container h1 {
+    align-items: center;
+}
+
+.grid-container p {
+    font-size: 1.1em;
+}
+
+.new {
+    text-align: start;
+}
+
+/* KONTAKT FORMULÄRET */
+.main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 20px 30px;
+    gap: 10px;
+
+}
+
+/* FOOTER */
+footer {
+    background-color: rgb(10, 10, 40);
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "logo-footer logo-footer"
+    "kontakt-footer nav-footer";
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* FOOTER LOGOTYP */
+.logo-footer {
+    grid-area: logo-footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.logo footer img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* FOOTER KONTAKT */
+.kontakt-footer {
+    grid-area: kontakt-footer;
+    font-size: 1.1em;
+}
+
+.kontakt-footer h2 {
+    font-size: 1.1em;
+}
+
+/* FOOTER NAVIGATION*/
+.nav-footer {
+    grid-area: nav-footer;
+}
+
+footer nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    text-align: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+/* TABLET */
+@media (min-width: 800px) {
+    .header-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .topnav {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: flex-end;
+        gap: 20px;
+        overflow: visible;
+        background-color: rgb(10, 10, 40);
+    }
+
+    .topnav #myLinks {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        color: white;
+        text-decoration: none;
+        font-size: 1.1em;
+    }
+
+    .topnav a {
+        display: block;
+        white-space: nowrap;
+    }
+
+    .topnav a.icon {
+        display: none;
+    }
+}
+
+/* DESKTOP */ 
+@media (min-width: 1000px) {
+    .grid-container {
+        text-align: start;
+    }
+
+    .main-wrapper {
+        padding: 25px;
+    }
+
+    .footer-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "logo-footer kontakt-footer nav-footer";
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .logo-footer {
+        justify-content: flex-start;
+        margin: 1rem 0;
+    }
+
+    .nav-footer {
+        text-align: center;
+    }
+}

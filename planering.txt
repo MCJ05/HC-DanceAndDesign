@@ -10,3 +10,4 @@ Event;
 Övrigt:
 - kurser -> länkar vidare till Alnö Linedance hemsida
 
+Skapa mobilmeny som går att öppna/stänga med JS
