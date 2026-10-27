@@ -11,3 +11,11 @@ function myFunction() {
     }
 }
 
+// HÄMTADE ELEMENT FÅRN DOM
+const form = document.querySelector("#contactform");
+
+const fullnameInput = document.querySelector("#fullname");
+const emailInput = document.querySelector("#email");
+const eventSelect = document.querySelector("#event");
+
+const errorList = document.querySelector("#errorlist");
