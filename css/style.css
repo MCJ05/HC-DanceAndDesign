@@ -87,15 +87,6 @@ header {
     display: block;
 }
 
-.topnav a.icon{
-    background: rgb(52, 52, 71);
-    display: block;
-    position: center;
-    color: white;
-    right: 0;
-    top: 0;
-}
-
 .topnav a:hover{
     background-color: #ddd;
     color: black;
