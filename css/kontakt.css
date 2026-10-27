@@ -164,11 +164,6 @@ footer {
         padding: 25px;
     }
 
-    nav ul {
-        flex-direction: row;
-        gap: 30px;
-    }
-
     .footer-wrapper {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 
