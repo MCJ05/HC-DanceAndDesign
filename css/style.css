@@ -88,9 +88,10 @@ header {
 }
 
 .topnav a.icon{
-    background: rgb(37, 37, 67);
+    background: rgb(52, 52, 71);
     display: block;
     position: center;
+    color: white;
     right: 0;
     top: 0;
 }
@@ -205,7 +206,7 @@ footer nav ul li a {
 }
 
 /* TABLET */
-@media(min-width: 800px) {
+@media(min-width: 900px) {
     .header-wrapper {
         display: flex;
         flex-direction: row;
@@ -220,6 +221,7 @@ footer nav ul li a {
     justify-content: flex-end;
     gap: 20px;
     overflow: visible;
+    background-color: rgb(10, 10, 40);
     }
 
     .topnav #myLinks {
