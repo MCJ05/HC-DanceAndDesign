@@ -239,12 +239,13 @@ footer nav ul li a {
 @media (min-width: 1000px) {
     .center-left {
         position: absolute;
-        top: 30rem;
+        top: 25rem;
         left: 7rem;
+        text-align: center;
     }
 
     .center-left p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .side-wrapper {
