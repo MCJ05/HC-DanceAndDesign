@@ -152,6 +152,35 @@ footer {
         justify-content: space-between;
         align-items: center;
     }
+
+    .topnav {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: flex-end;
+        gap: 20px;
+        overflow: visible;
+        background-color: rgb(10, 10, 40);
+    }
+
+    .topnav #myLinks {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        color: white;
+        text-decoration: none;
+        font-size: 1.1em;
+    }
+
+    .topnav a {
+        display: block;
+        white-space: nowrap;
+    }
+
+    .topnav a.icon {
+        display: none;
+    }
 }
 
 /* DESKTOP */ 
