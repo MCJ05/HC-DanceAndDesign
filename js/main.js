@@ -37,7 +37,7 @@ form.addEventListener("submit", function(event) {
         return;
     }
 
-    createEventForm();
+    // createEventForm();
     // HISTORIK
     saveHistory();
 
