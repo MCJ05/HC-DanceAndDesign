@@ -265,6 +265,10 @@ footer nav ul li a {
         padding: 15px 15px;
     }
 
+    .aside-button {
+        text-align: center;
+    }
+
     .side-wrapper h2 {
         text-align: start;
     }
