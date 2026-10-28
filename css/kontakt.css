@@ -132,6 +132,10 @@ button, .btn {
     color: black;
 }
 
+.main-wrapper #phone {
+    color: black;
+}
+
 .main-wrapper #subjekt {
     color: black;
     background-color: white;
@@ -249,10 +253,10 @@ footer nav ul li a {
 
     .container {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 2fr 3fr;
         grid-template-areas:
-        "grid-container main-wrapper";
-        gap: 1rem;
+        "main-wrapper grid-container";
+        gap: none;
 
     }
 
@@ -269,6 +273,7 @@ footer nav ul li a {
 @media (min-width: 1000px) {   
     .grid-container {
         text-align: start;
+        gap: none;
     }
 
     .grid-container h1 {
