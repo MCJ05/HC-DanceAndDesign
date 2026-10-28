@@ -16,6 +16,7 @@ const form = document.querySelector("#contactform");
 
 const fullnameInput = document.querySelector("#fullname");
 const emailInput = document.querySelector("#email");
+const phoneInput = document.querySelector("#phone");
 const eventSelect = document.querySelector("#subjekt");
 const messageInput = document.querySelector("#message");
 
@@ -27,12 +28,13 @@ form.addEventListener("submit", function(event) {
     const user = {
         fullname: fullnameInput.value.trim(),
         email: emailInput.value.trim(),
+        phone: phoneInput.value,
         event: eventSelect.value,
         message: messageInput.value
     };
     console.log(user);
 
-    if(!validateForm(user.fullname, user.email, user.event)) {
+    if(!validateForm(user.fullname, user.email, user.phone, user.event)) {
         displayErrors();
         return;
     }
@@ -45,7 +47,7 @@ form.addEventListener("submit", function(event) {
 
 let errors = [];
 
-function validateForm(fullname, email, event) {
+function validateForm(fullname, email, phone, event) {
     let validate = true;
 
     console.log(validate);
@@ -66,6 +68,12 @@ function validateForm(fullname, email, event) {
         validate = false;
     }
 
+    // VALIDERAT TELEFON-INPUT
+    if(phone === "") {
+        errors.push("Skriv in ditt telefonnummer");
+        validate = false;
+    }
+
     // VALIDER VAL AV ÄRENDE
     if(event === "") {
         errors.push("Välj ett ärende");
@@ -74,6 +82,7 @@ function validateForm(fullname, email, event) {
 
     console.log(fullname);
     console.log(email);
+    console.log(phone);
     console.log(event);
 
     // RETUNERA RESULTATET AV VALIDERINGEN
@@ -102,6 +111,7 @@ function createEventForm (user) {
     history.push( {
         fullname: user.fullname,
         email: user.email,
+        phone: uder.phone,
         event: user.event,
         message: user.message
     });
