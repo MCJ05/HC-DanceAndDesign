@@ -35,6 +35,8 @@ form.addEventListener("click", function(event) {
         return;
     }
 
+    // HISTORIK
+    saveHistory();
 
 });
 
@@ -86,5 +88,19 @@ function displayErrors() {
         liElement.textContent = errors[i];
         errorList.appendChild(liElement);
     }
+}
+
+function createEventForm (user) {
+
+    history.push( {
+        fullname: user.fullname,
+        email: useDeferredValue.email,
+        event: user.event
+    });
+}
+
+// SPARAR HISTORIK I LOCALSTORAGE
+function saveHistory() {
+    localStorage.serItem("history", JSON.stringify(history));
 }
 
