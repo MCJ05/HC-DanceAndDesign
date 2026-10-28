@@ -16,11 +16,11 @@ const form = document.querySelector("#contactform");
 
 const fullnameInput = document.querySelector("#fullname");
 const emailInput = document.querySelector("#email");
-const eventSelect = document.querySelector("#eventform");
+const eventSelect = document.querySelector("#subjekt");
 
 const errorList = document.querySelector("#errorlist");
 
-form.addEventListener("click", function(event) {
+form.addEventListener("submit", function(event) {
     event.preventDefault();
 
     const user = {
@@ -35,6 +35,7 @@ form.addEventListener("click", function(event) {
         return;
     }
 
+    createEventForm();
     // HISTORIK
     saveHistory();
 
@@ -53,7 +54,7 @@ function validateForm(fullname, email, event) {
 
     // VALIDERA NAMN-INPUT
     if(fullname === "") {
-        error.push("Skriv in ditt fullständiga namn");
+        errors.push("Skriv in ditt fullständiga namn");
         validate = false;
     }
 
@@ -90,17 +91,21 @@ function displayErrors() {
     }
 }
 
+let historyList = JSON.parse (
+    localStorage.getItem("history") || "[]"
+);
+
 function createEventForm (user) {
 
     history.push( {
         fullname: user.fullname,
-        email: useDeferredValue.email,
+        email: user.email,
         event: user.event
     });
 }
 
 // SPARAR HISTORIK I LOCALSTORAGE
 function saveHistory() {
-    localStorage.serItem("history", JSON.stringify(history));
+    localStorage.setItem("history", JSON.stringify(historyList));
 }
 
