@@ -75,3 +75,16 @@ function validateForm(fullname, email, event) {
     return validate;
 
 }
+
+// VISAR FELMEDDELANDEN PÅ SIDAN
+function displayErrors() {
+    errorList.innerHTML = "";
+
+    // SKRIVER UT AKTUELLA FELMEDDELANDEN TILL DOM
+    for(let i = 0; i < errors.length; i++) {
+        const liElement = document.createElement("li");
+        liElement.textContent = errors[i];
+        errorList.appendChild(liElement);
+    }
+}
+
