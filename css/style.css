@@ -206,13 +206,13 @@ footer nav ul li a {
     }
 
     .topnav {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: flex-end;
-    gap: 20px;
-    overflow: visible;
-    background-color: rgb(10, 10, 40);
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: flex-end;
+        gap: 20px;
+        overflow: visible;
+        background-color: rgb(10, 10, 40);
     }
 
     .topnav #myLinks {
@@ -239,7 +239,7 @@ footer nav ul li a {
 @media (min-width: 1000px) {
     .center-left {
         position: absolute;
-        top: 30rem;
+        top: 22rem;
         left: 7rem;
     }
 
@@ -269,6 +269,7 @@ footer nav ul li a {
         grid-template-areas: 
         "h1 h1"
         "grid-card1 grid-card2";
+        background-color: rgb(37, 37, 67);
     }
 
     .grid-container h1 {
