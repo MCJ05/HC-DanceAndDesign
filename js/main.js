@@ -17,6 +17,7 @@ const form = document.querySelector("#contactform");
 const fullnameInput = document.querySelector("#fullname");
 const emailInput = document.querySelector("#email");
 const eventSelect = document.querySelector("#subjekt");
+const messageInput = document.querySelector("#message");
 
 const errorList = document.querySelector("#errorlist");
 
@@ -26,7 +27,8 @@ form.addEventListener("submit", function(event) {
     const user = {
         fullname: fullnameInput.value.trim(),
         email: emailInput.value.trim(),
-        event: eventSelect.value
+        event: eventSelect.value,
+        message: messageInput.value
     };
     console.log(user);
 
@@ -94,16 +96,17 @@ function displayErrors() {
 let historyList = JSON.parse (
     localStorage.getItem("history") || "[]"
 );
-
+/*
 function createEventForm (user) {
 
     history.push( {
         fullname: user.fullname,
         email: user.email,
-        event: user.event
+        event: user.event,
+        message: user.message
     });
 }
-
+*/
 // SPARAR HISTORIK I LOCALSTORAGE
 function saveHistory() {
     localStorage.setItem("history", JSON.stringify(historyList));
