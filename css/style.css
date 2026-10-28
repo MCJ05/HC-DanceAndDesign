@@ -145,11 +145,17 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
         "logo-footer logo-footer"
-        "kontakt-footer nav-footer";
+        "kontakt-footer nav-footer"
+        "p p";
     gap: 1rem;
     max-width: 1000px;
     margin: 0 auto;
     align-items: start;
+}
+
+.footer-wrapper p {
+    grid-area: p;
+    text-align: start;
 }
 
 /* FOOTER LOGOTYP */
@@ -174,6 +180,10 @@ footer {
 
 .kontakt-footer h2 {
     font-size: 1.1em;
+}
+
+.kontakt-footer p {
+    text-align: center;
 }
 
 /* FOOTER NAVIGATION */
@@ -302,14 +312,24 @@ footer nav ul li a {
     .footer-wrapper {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 
-            "logo-footer kontakt-footer nav-footer";
+            "logo-footer kontakt-footer nav-footer"
+            "p p p";
         align-items: center;
         gap: 1rem;
+    }
+
+    .footer-wrapper p {
+        grid-area: p;
+        text-align: start;
     }
 
     .logo-footer {
         justify-content: flex-start;
         margin: 1rem 0;
+    }
+
+    .kontakt-footer p {
+        text-align: center;
     }
 
     .nav-footer {
