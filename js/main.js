@@ -34,7 +34,7 @@ form.addEventListener("submit", function(event) {
     };
     console.log(user);
 
-    if(!validateForm(user.fullname, user.email, user.phone, user.event)) {
+    if(!validateForm(user.fullname, user.email, user.phone, user.event, user.message)) {
         displayErrors();
         return;
     }
@@ -47,7 +47,7 @@ form.addEventListener("submit", function(event) {
 
 let errors = [];
 
-function validateForm(fullname, email, phone, event) {
+function validateForm(fullname, email, phone, event, message) {
     let validate = true;
 
     console.log(validate);
@@ -80,10 +80,17 @@ function validateForm(fullname, email, phone, event) {
         validate = false;
     }
 
+    // VALIDERAT TEXTRUTAN
+    if(message === "") {
+        errors.push("Skriv vad ditt ärende angår");
+        validate = false;
+    }
+
     console.log(fullname);
     console.log(email);
     console.log(phone);
     console.log(event);
+    console.log(message);
 
     // RETUNERA RESULTATET AV VALIDERINGEN
     return validate;
