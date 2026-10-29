@@ -13,6 +13,7 @@ function myFunction() {
 
 // HÄMTADE ELEMENT FÅRN DOM
 const form = document.querySelector("#contactform");
+const clearButton = document.querySelector("#clear");
 
 const fullnameInput = document.querySelector("#fullname");
 const emailInput = document.querySelector("#email");
@@ -21,6 +22,8 @@ const eventSelect = document.querySelector("#subjekt");
 const messageInput = document.querySelector("#message");
 
 const errorList = document.querySelector("#errorlist");
+
+clearButton.addEventListener("click", clearForm);
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -32,16 +35,18 @@ form.addEventListener("submit", function(event) {
         event: eventSelect.value,
         message: messageInput.value
     };
-    console.log(user);
+    //console.log(user);
 
     if(!validateForm(user.fullname, user.email, user.phone, user.event, user.message)) {
         displayErrors();
         return;
     }
 
-    // createEventForm();
     // HISTORIK
     saveHistory();
+
+    // RENSA FORMULÄRET
+    clearForm();
 
 });
 
@@ -127,5 +132,14 @@ function createEventForm (user) {
 // SPARAR HISTORIK I LOCALSTORAGE
 function saveHistory() {
     localStorage.setItem("history", JSON.stringify(historyList));
+}
+
+function clearForm() {
+    fullnameInput.value = "";
+    emailInput.value = "";
+    phoneInput.value = "";
+    messageInput.value = "";
+
+    errorList.innerHTML = "";
 }
 
