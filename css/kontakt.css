@@ -102,9 +102,8 @@ button, .btn {
     align-items: center;
     background-color: rgb(2, 8, 44);
     width: 100%;
-    padding: 2em 3em 2em 3em;
+    padding: 2em 4em 2em 4em;
     max-width: 800px;
-    margin: 0 auto;
     position: relative;
 }
 
@@ -156,6 +155,8 @@ button, .btn {
 .side-wrapper img {
     height: 500px;
     width: 450px;
+    padding: 2em 2em;
+    padding-bottom: none;
 }
 
 
@@ -271,7 +272,7 @@ footer nav ul li a {
 
     .container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
         grid-template-areas:
         "main-wrapper grid-container side-wrapper";
         gap: none;
