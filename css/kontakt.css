@@ -269,6 +269,19 @@ footer nav ul li a {
     .topnav a.icon {
         display: none;
     }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "grid-container side-wrapper" 
+        "main-wrapper main-wrapper";
+        gap: none;
+    }
+
+    .grid-container {
+        padding: 2em 2em;
+    }
 }
 
 /* DESKTOP */ 
