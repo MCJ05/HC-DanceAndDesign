@@ -156,7 +156,7 @@ button, .btn {
     height: 500px;
     width: 450px;
     padding: 2em 2em;
-    padding-bottom: none;
+    align-content: center;
 }
 
 
@@ -269,7 +269,11 @@ footer nav ul li a {
     .topnav a.icon {
         display: none;
     }
+}
 
+/* DESKTOP */ 
+@media (min-width: 1000px) {   
+    
     .container {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
@@ -281,22 +285,20 @@ footer nav ul li a {
     .side-wrapper img {
         grid-area: side-wrapper;
         align-items: end;
+        height: 500px;
+        width: 450px;
+        padding: 2em 2em;
+        padding-bottom: none;
     }
 
     .grid-container {
         grid-area: grid-container;
+        text-align: start;
+        gap: none;
     }
 
     .main-wrapper {
         grid-area: main-wrapper;
-    }
-}
-
-/* DESKTOP */ 
-@media (min-width: 1000px) {   
-    .grid-container {
-        text-align: start;
-        gap: none;
     }
 
     .grid-container h1 {
@@ -313,7 +315,7 @@ footer nav ul li a {
             "logo-footer kontakt-footer nav-footer"
             "p p p";
         align-items: center;
-        gap: 5rem;
+        gap: 30px;
     }
 
     .footer-wrapper p {
