@@ -2,12 +2,12 @@
 
 // FÅR MOBIL MENYN ATT ÖPPNA OCH STÄNGAS
 function myFunction() {
-    var x = document.getElementById("myLinks");
+    const x = document.getElementById("myLinks");
 
-    if(x.style.display === "block") {
-        x.style.display = "none";
-    } else {
+    if(getComputedStyle(x).display === "none") {
         x.style.display = "block";
+    } else {
+        x.style.display = "none";
     }
 }
 
@@ -23,8 +23,17 @@ const messageInput = document.querySelector("#message");
 
 const errorList = document.querySelector("#errorlist");
 
+// LADDA HISTORIKEN
+let historyList = JSON.parse (
+    localStorage.getItem("history") || "[]"
+);
+
+let errors = [];
+
+//RENSNINGSKNAPP
 clearButton.addEventListener("click", clearForm);
 
+// HÄMTA FORMULÄRET
 form.addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -37,26 +46,26 @@ form.addEventListener("submit", function(event) {
     };
     //console.log(user);
 
-    if(!validateForm(user.fullname, user.email, user.phone, user.event, user.message)) {
+    if(!validateForm(
+        user.fullname, 
+        user.email, 
+        user.phone, 
+        user.event, 
+        user.message
+    )) {
         displayErrors();
         return;
     }
 
     // HISTORIK
+    historyList.push(user);
     saveHistory();
 
     // RENSA FORMULÄRET
     clearForm();
-
 });
 
-let errors = [];
-
 function validateForm(fullname, email, phone, event, message) {
-    let validate = true;
-
-    console.log(validate);
-
     // TÖM REDAN UTSKRIVNA FELMEDDELANDEN
     errors = [];
     errorList.innerHTML = "";
@@ -64,31 +73,26 @@ function validateForm(fullname, email, phone, event, message) {
     // VALIDERA NAMN-INPUT
     if(fullname === "") {
         errors.push("Skriv in ditt fullständiga namn");
-        validate = false;
     }
 
     // VALIDERA EMAIL-INPUT
     if(email === "") {
         errors.push("Ange din e-postadress");
-        validate = false;
     }
 
     // VALIDERAT TELEFON-INPUT
     if(phone === "") {
         errors.push("Skriv in ditt telefonnummer");
-        validate = false;
     }
 
     // VALIDER VAL AV ÄRENDE
     if(event === "") {
         errors.push("Välj ett ärende");
-        validate = false;
     }
 
     // VALIDERAT TEXTRUTAN
     if(message === "") {
         errors.push("Skriv vad ditt ärende angår");
-        validate = false;
     }
 
     console.log(fullname);
@@ -98,8 +102,7 @@ function validateForm(fullname, email, phone, event, message) {
     console.log(message);
 
     // RETUNERA RESULTATET AV VALIDERINGEN
-    return validate;
-
+    return errors.length === 0;
 }
 
 // VISAR FELMEDDELANDEN PÅ SIDAN
@@ -114,32 +117,14 @@ function displayErrors() {
     }
 }
 
-let historyList = JSON.parse (
-    localStorage.getItem("history") || "[]"
-);
-/*
-function createEventForm (user) {
-
-    history.push( {
-        fullname: user.fullname,
-        email: user.email,
-        phone: uder.phone,
-        event: user.event,
-        message: user.message
-    });
-}
-*/
 // SPARAR HISTORIK I LOCALSTORAGE
 function saveHistory() {
     localStorage.setItem("history", JSON.stringify(historyList));
 }
 
 function clearForm() {
-    fullnameInput.value = "";
-    emailInput.value = "";
-    phoneInput.value = "";
-    messageInput.value = "";
-
+    form.reset();
     errorList.innerHTML = "";
+    errors = [];
 }
 
