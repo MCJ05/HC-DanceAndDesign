@@ -65,13 +65,22 @@ header {
 }
 
 /* MAIN */
+button, .btn {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
 .grid-container {
-    background-color: rgb(52, 52, 71);
+    background-color: rgb(37, 37, 67);
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
     height: 100%;
-    padding: 25px 20px;
+    padding: 30px 10px;
     text-align: center;
 }
 
@@ -81,6 +90,7 @@ header {
 
 .grid-container p {
     font-size: 1.1em;
+    text-align: start;
 }
 
 .new {
@@ -88,14 +98,67 @@ header {
 }
 
 /* KONTAKT FORMULÄRET */
+.card {
+    align-items: center;
+    background-color: rgb(2, 8, 44);
+    width: 100%;
+    padding: 2em 4em 2em 4em;
+    max-width: 800px;
+    position: relative;
+}
+
 .main-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: start;
-    padding: 20px 30px;
+    align-items: center;
+    text-align: start;
+    padding: 10px 10px;
     gap: 10px;
-
 }
+
+.main-wrapper #errorlist {
+    color: rgb(149, 14, 14);
+    font-weight: bold;
+}
+
+.main-wrapper #errorlist li {
+    color: rgb(149, 14, 14);
+}
+
+.main-wrapper #fullname {
+    color: black;
+}
+
+.main-wrapper #email {
+    color: black;
+}
+
+.main-wrapper #phone {
+    color: black;
+}
+
+.main-wrapper #subjekt {
+    color: black;
+    background-color: white;
+}
+
+.main-wrapper #subjekt option {
+    color: black;
+    background-color: white;
+}
+
+.main-wrapper #message {
+    color: black;
+}
+
+/* MAIN */
+.side-wrapper img {
+    height: 500px;
+    width: 450px;
+    padding: 2em 2em;
+    align-content: center;
+}
+
 
 /* FOOTER */
 footer {
@@ -109,11 +172,17 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "logo-footer logo-footer"
-    "kontakt-footer nav-footer";
+    "kontakt-footer nav-footer"
+    "p p";
     gap: 1rem;
     max-width: 1000px;
     margin: 0 auto;
     align-items: start;
+}
+
+.footer-wrapper p {
+    grid-area: p;
+    text-align: start;
 }
 
 /* FOOTER LOGOTYP */
@@ -138,6 +207,10 @@ footer {
 
 .kontakt-footer h2 {
     font-size: 1.1em;
+}
+
+.kontakt-footer p {
+    text-align: center;
 }
 
 /* FOOTER NAVIGATION*/
@@ -196,12 +269,49 @@ footer nav ul li a {
     .topnav a.icon {
         display: none;
     }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "grid-container side-wrapper" 
+        "main-wrapper main-wrapper";
+    }
+
+    .grid-container {
+        padding: 2em 2em;
+    }
 }
 
 /* DESKTOP */ 
-@media (min-width: 1000px) {
+@media (min-width: 1000px) {   
+    
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas:
+        "main-wrapper grid-container side-wrapper";
+    }
+    
+    .side-wrapper img {
+        grid-area: side-wrapper;
+        align-items: end;
+        height: 500px;
+        width: 450px;
+        padding: 2em 2em;
+    }
+
     .grid-container {
+        grid-area: grid-container;
         text-align: start;
+    }
+
+    .main-wrapper {
+        grid-area: main-wrapper;
+    }
+
+    .grid-container h1 {
+        text-align: center;
     }
 
     .main-wrapper {
@@ -211,14 +321,24 @@ footer nav ul li a {
     .footer-wrapper {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 
-            "logo-footer kontakt-footer nav-footer";
+            "logo-footer kontakt-footer nav-footer"
+            "p p p";
         align-items: center;
-        gap: 5rem;
+        gap: 30px;
+    }
+
+    .footer-wrapper p {
+        grid-area: p;
+        text-align: start;
     }
 
     .logo-footer {
         justify-content: flex-start;
         margin: 1rem 0;
+    }
+
+    .kontakt-footer p {
+        text-align: center;
     }
 
     .nav-footer {
