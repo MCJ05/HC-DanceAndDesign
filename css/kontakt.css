@@ -276,7 +276,6 @@ footer nav ul li a {
         grid-template-areas:
         "grid-container side-wrapper" 
         "main-wrapper main-wrapper";
-        gap: none;
     }
 
     .grid-container {
@@ -292,7 +291,6 @@ footer nav ul li a {
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-areas:
         "main-wrapper grid-container side-wrapper";
-        gap: none;
     }
     
     .side-wrapper img {
@@ -301,13 +299,11 @@ footer nav ul li a {
         height: 500px;
         width: 450px;
         padding: 2em 2em;
-        padding-bottom: none;
     }
 
     .grid-container {
         grid-area: grid-container;
         text-align: start;
-        gap: none;
     }
 
     .main-wrapper {
