@@ -117,12 +117,12 @@ button, .btn {
 }
 
 .main-wrapper #errorlist {
-    color: rgb(149, 14, 14);
+    color: rgb(195, 20, 20);
     font-weight: bold;
 }
 
 .main-wrapper #errorlist li {
-    color: rgb(149, 14, 14);
+    color: rgb(195, 20, 20);
 }
 
 .main-wrapper #fullname {
