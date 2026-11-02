@@ -122,6 +122,12 @@ function saveHistory() {
     localStorage.setItem("history", JSON.stringify(historyList));
 }
 
+// RADERA HISTORIKEN
+function deleteHistory() {
+    history = [];
+    localStorage.removeItem("history");
+}
+
 function clearForm() {
     form.reset();
     errorList.innerHTML = "";
